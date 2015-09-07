@@ -1,9 +1,9 @@
 <h1>Profile Page</h1>
 <div>
-  <p><%= current_user.first_name %></p>
-  <p><%= current_user.last_name %></p>
-  <p><%= current_user.email %></p>
-  <p><%= current_user.phone_number %></p>
+  <p><%= @current_user.first_name %></p>
+  <p><%= @current_user.last_name %></p>
+  <p><%= @current_user.email %></p>
+  <p><%= @current_user.phone_number %></p>
 </div>
 <h3>Emergency Contacts</h3>
 <%= @current_user.contacts.each do |contact| %>
