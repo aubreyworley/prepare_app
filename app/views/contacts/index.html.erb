@@ -1,0 +1,9 @@
+<h1>Emergency Contacts</h1>
+<hr>
+<% @contacts.each do |contact| %>
+  <p><%= contact.first_name %> - <%= contact.last_name %> - <%= contact.email %> - <%= contact.phone_number %></p>
+<% end %>
+
+<% if current_user %>
+  <%= link_to "Add Contact", new_contact_path %>
+  <% end %>

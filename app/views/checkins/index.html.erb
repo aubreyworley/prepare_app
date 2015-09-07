@@ -1,0 +1,9 @@
+<h1>Check-Ins</h1>
+<hr>
+<% @checkins.each do |checkin| %>
+  <p><%= checkin.first_name %> - <%= checkin.last_name %> - <%= checkin.status %></p>
+<% end %>
+
+<% if current_user %>
+  <%= link_to "Check-in", new_checkin_path %>
+  <% end %>
