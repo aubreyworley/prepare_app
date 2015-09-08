@@ -1,7 +1,13 @@
-<h1>New Checkin</h1>
-<%= form_for @checkin do |f| %>
-<%= f.text_field :first_name, placeholder: "First Name" %><br>
-  <%= f.text_field :last_name, placeholder: "Last Name" %><br>
-  <%= f.text_field :status, placeholder: "Status" %><br>
-  <%= f.submit "Save Checkin" %>
-<% end %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h1>New Checkin</h1>
+    <%= form_for @checkin do |f| %>
+    <%= f.text_field :first_name, placeholder: "First Name" %><br>
+    <%= f.text_field :last_name, placeholder: "Last Name" %><br>
+    <%= f.text_field :status, placeholder: "Status" %><br>
+    <%= f.submit "Save Checkin" %>
+    <% end %>
+  </div>
+</div>
+
+
