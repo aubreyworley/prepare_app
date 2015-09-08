@@ -1,11 +1,46 @@
-<h1>Profile Page</h1>
-<div>
-  <p><%= @current_user.first_name %></p>
-  <p><%= @current_user.last_name %></p>
-  <p><%= @current_user.email %></p>
-  <p><%= @current_user.phone_number %></p>
-</div>
-<h3>Emergency Contacts</h3>
-<%= @current_user.contacts.each do |contact| %>
-<p><%= contact.first_name %> - <%= contact.last_name %> - <%= contact.phone_number %> - <%= contact.email %> </p>
-<%= end %>
+<div class="jumbotron"></div>
+<div class="profile-page">
+  <div class="container-fluid">
+    <div class="col-md-1"></div>
+    <div class="col-md-3">
+      <p class="profile-img"><img src="http://babyinfoforyou.com/wp-content/uploads/2014/10/avatar-300x300.png" class= "img-responsive img-rounded profile-img"></p>
+      <div class="profile-info">
+        <h2><%= current_user.first_name %><%= " " %><%= current_user.last_name %></h2>
+        <p>Joined <%= @current_user.created_at.strftime("%b. %Y") %></p>
+        <p><%= @current_user.email %></p>
+        <p><%= @current_user.phone_number %></p>
+        <span><%= link_to "update profile", edit_user_path(current_user), class: "btn btn-dark" %></span>
+      </div>
+    </div>
+    <div class="col-md-1"></div>
+    <div class="col-md-6">
+      <span class="profile-welcome">Welcome <%= current_user.first_name %>!
+        <h3>Your Trust Circle</h3>
+        <hr>
+        <% if current_user.contacts.any? %>
+        <% @current_user.contacts.each do |contact| %>
+        <div class="contact-section">
+          <div class="dropdown pull-right">
+            <button class="dropdown-toggle button btn btn-dark" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Edit Contact</button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><%= link_to "Update Contact", edit_contact_path(contact) %></li>
+              <li><%= link_to "Delete", contact, method: :delete %></li>
+            </ul>
+          </div>
+          <p> Name: <%= contact.first_name %> - <%= contact.last_name %></p><br>
+          <hr>
+          <p><i class="glyphicon glyphicon-envelope"></i>Email: <%= contact.email %></p><br>
+          <p><i class="glyphicon glyphicon-phone"></i>Email: <%= contact.phone_number %><p><br>
+          </div>
+          <% end %>
+          <% else %>
+            <p>Make Your Trust Circle!</p>
+            <hr>
+          <% end %>
+          <%= link_to "Add New Contact", new_contact_path, class: "btn btn-default" %>
+        </div>
+        <div class="col-md-1"></div> 
+      </div>
+    </div>
+
+  

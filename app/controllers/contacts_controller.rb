@@ -12,7 +12,7 @@ class ContactsController < ApplicationController
   def create
   @contact = current_user.contacts.new(contact_params)
     if @contact.save
-      render json: @contact
+      redirect_to profile_path
     else
       flash[:error] = "Oops! Try saving your contact again."
       render json: { errors: @contact.errors.full_messages }, status: :unprocessable_entity
