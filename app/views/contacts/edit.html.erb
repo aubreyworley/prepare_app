@@ -1,2 +1,12 @@
-<h1>Contacts#edit</h1>
-<p>Find me in app/views/contacts/edit.html.erb</p>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h1>Update Contact</h1>
+      <%= form_for @contact do |f| %>
+      <%= f.text_field :first_name, placeholder: "First Name" %><br>
+      <%= f.text_field :last_name, placeholder: "Last Name" %><br>
+      <%= f.email_field :email, placeholder: "Email" %><br>
+      <%= f.text_field :phone_number, placeholder: "phone_number" %><br>
+      <%= f.submit "Save Contact" %>
+    <% end %>
+  </div>
+</div>

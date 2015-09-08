@@ -27,10 +27,10 @@
               <li><%= link_to "Delete", contact, method: :delete %></li>
             </ul>
           </div>
-          <p> Name: <%= contact.first_name %> - <%= contact.last_name %></p><br>
+          <p> Name: <%= contact.first_name %> - <%= contact.last_name %></p><hr>
           <hr>
-          <p><i class="glyphicon glyphicon-envelope"></i>Email: <%= contact.email %></p><br>
-          <p><i class="glyphicon glyphicon-phone"></i>Email: <%= contact.phone_number %><p><br>
+          <p><i class="glyphicon glyphicon-envelope"></i><%= contact.email %></p>
+          <p><i class="glyphicon glyphicon-phone"></i> <%= contact.phone_number %>
           </div>
           <% end %>
           <% else %>
