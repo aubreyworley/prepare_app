@@ -46,7 +46,7 @@ class CheckinsController < ApplicationController
       end
     else
       flash[:error] = checkin.errors.full_messages.join(', ')
-      redirect_to checkin_path
+      redirect_to checkins_path
     end
   end
 
