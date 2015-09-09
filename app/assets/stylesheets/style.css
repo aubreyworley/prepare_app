@@ -34,7 +34,6 @@ background: linear-gradient(to bottom,  #18c9d2 0%,#18699b 32%,#09415c 45%,#0941
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#18c9d2', endColorstr='#062b46',GradientType=0 ); /* IE6-9 */
 }
 
-}
 body a {
 	transition:0.5s all;
 	-webkit-transition:0.5s all;
