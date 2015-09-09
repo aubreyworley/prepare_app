@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   resources :sessions
 
   # checkins routes
+  get "/checkins", to: "checkins#show"
   resources :checkins
 
   # contacts routes

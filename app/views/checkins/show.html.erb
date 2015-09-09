@@ -1,6 +1,64 @@
-<h1><%= @checkin.first_name %></h1>
-<hr>
-<p><%= @checkin.last_name %></p>
-<hr>
-<p><%= @checkin.status %></p>
+<div class="jumbotron"></div>
+<div class="container">
+  <div class="row" style="text-align:center">
+    <div class="col-md-8 col-md-offset-3">
+      <h1>Find Your Loved Ones</h1>
+      <br>
+      <hr>
+      <br>
+      <div class="row">
+        <p>Check-in after a disaster, search for missing persons, and connect with those you love.</p>
+      </div>
+      <br>
+      <br>
+      <h2>Check-in Center</h2>
+      <br>
+      <br>
+      <!-- Checkins -->
+      <br>
+      <div class="centered">
+        <a class="btn btn-dark btn-block" data-toggle="modal" data-target="#checkin-modal" id="checkin-button">New Checkin</a>
+      </div>
+      <div class="modal fade" id="checkin-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <%= render "checkinform" %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br><br>
+      <div class="row">
+        <div class="col-xs-5 col-md-3">Posted by</div>
+        <div class="col-xs-5 col-md-3">First Name</div>
+        <div class="col-xs-5 col-md-3">Last Name</div>
+        <div class="col-xs-5 col-md-3">Status</div>
+      </div>
+      <hr>
+       <div class="row">
+        <% @checkins.each do |checkin| %>
+          <div class="col-xs-6 col-md-3"><%= checkin.user.first_name %>-<%= checkin.user.last_name %></div>
+          <div class="col-xs-6 col-md-3"><p><%= checkin.first_name %></p></div>
+          <div class="col-xs-6 col-md-3"><p><%= checkin.last_name %></p></div>
+          <div class="col-xs-5 col-md-3"><%= checkin.status %>
+            <% if checkin.user == current_user %>
+              <%= link_to '<span class="glyphicon glyphicon-trash"></span>'.html_safe, checkins_path(checkin), class: "btn", method: :delete, data: { confirm: 'Are you sure?' } %>
+            <% end %>
+          </div>
+        <% end %>
+      </div>   
+    </div>
+  </div>
+</div>
+
+      
+      
+     
+        
+  
+
+
+
+
 

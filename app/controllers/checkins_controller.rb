@@ -1,24 +1,31 @@
 class CheckinsController < ApplicationController
-  
-  #show all checkins in db
+
   def index
     @checkins = Checkin.all
     render :index
   end
 
-# form to create new checkin that belongs to current_user
   def new
     @checkin = Checkin.new
     render :new
   end
 
+
   def create
-    checkin = current_user.checkins.create(checkin_params)
-    redirect_to checkin_path(checkin)
+    @checkin = current_user.checkins.new(checkin_params)
+      if @checkin.save
+        flash[:notice] = "Successfully saved checkin."
+        redirect_to checkins_path
+      else
+        flash[:error] = checkin.errors.full_messages.join(',')
+        redirect_to checkin_path
+      end
   end
 
+  #show all checkins in db
   def show
-    render :show
+    @checkin = Checkin.new
+    @checkins = Checkin.all
   end
 
   def edit
@@ -28,10 +35,23 @@ class CheckinsController < ApplicationController
   end
 
   def destroy
+    if checkin = Checkin.find(params[:id])
+      if current_user
+        flash[:notice] = "Successfully deleted checkin!"
+        checkin.delete
+        redirect_to checkin_path
+      else
+        flash[:error] = "You need to login in to delete post."
+        redirect_to root_path
+      end
+    else
+      flash[:error] = checkin.errors.full_messages.join(', ')
+      redirect_to checkin_path
+    end
   end
 
   private
     def checkin_params
-      params.require(:checkin).permit(:first_name, :last_name, :status)
+      params.require(:checkin).permit(:first_name, :last_name, :status, :user_id)
     end
 end
