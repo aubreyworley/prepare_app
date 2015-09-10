@@ -6,7 +6,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
 
 #checkins {
-background-image: url(/assets/love.jpeg);
+background-image: url(love.jpeg);
   background-size: cover;
   height: 500px;
   text-align: center;
@@ -212,7 +212,7 @@ nav a:focus {
     span.menu {
 	  width: 35px;
 	  height: 35px;
-	  background: url('/assets/nav.png') no-repeat;
+	  background: url(nav.png) no-repeat;
 	  display: inline-block;
 	  cursor: pointer;
 	  float: right;
@@ -247,7 +247,7 @@ nav a:focus {
 }
 /*--start-banner--*/
 .banner {
-  background: url(/assets/banner.jpg) no-repeat center top;
+  background: url(banner.jpg) no-repeat center top;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -346,7 +346,7 @@ nav a:focus {
   text-decoration: none;
   height: 80px;
   width: 40px;
-  background: transparent url("/assets/arrows.png") no-repeat left top;
+  background: transparent url("arrows.png") no-repeat left top;
     margin-top: -11%;
   display:block;
 }
@@ -630,7 +630,7 @@ p.para {
 .ch-info-wrap {
 	top: 20px;
 	left: 20px;
-	background: #f9f9f9 url(/assets/banner.jpg);
+	background: #f9f9f9 url(banner.jpg);
 	box-shadow: 
 		0 0 0 20px rgba(255,255,255,0.2), 
 		inset 0 0 3px rgba(115,114, 23, 0.8);
@@ -676,14 +676,14 @@ p.para {
 }
 
 .ch-img-1 { 
-	background-image: url(assets/t1.jpg);
+	background-image: url(t1.jpg);
 }
 .ch-img-2 { 
-	background-image: url(assets/t2.jpg);
+	background-image: url(t2.jpg);
 }
 
 .ch-img-3 { 
-	background-image: url(assets/t3.jpg);
+	background-image: url(t3.jpg);
 }
 
 .ch-info h3 {
@@ -768,7 +768,7 @@ p.para {
   position: relative;
   text-align: center;
   cursor: default;
-  background: #fff url(/assets/banner.jpg) no-repeat center center;
+  background: #fff url(banner.jpg) no-repeat center center;
 }
 .view .mask,.view .content {
      width: 300px;
@@ -1008,14 +1008,14 @@ p.para {
   height: 22px;
   border: none;
   text-indent: 100%;
-  background: url(assets/move-top.png) no-repeat 0px 0px;
+  background: url(move-top.png) no-repeat 0px 0px;
 }
 /*--responsive--*/
 @media (max-width:1440px){
 }
 @media (max-width:1280px){
 	.banner {
-	  background: url(/assets/banner.jpg) no-repeat center top;
+	  background: url(banner.jpg) no-repeat center top;
 	  background-size: cover;
 	  -webkit-background-size: cover;
 	  -moz-background-size: cover;
@@ -1031,7 +1031,7 @@ p.para {
 	  text-align: center;
 	}
 	.banner {
-	  background: url(/assets/banner.jpg) no-repeat center top;
+	  background: url(banner.jpg) no-repeat center top;
 	  background-size: cover;
 	  -webkit-background-size: cover;
 	  -moz-background-size: cover;
@@ -1069,7 +1069,7 @@ p.para {
 	  width: 24%;
 	}
 	.banner {
-	  background: url(/assets/banner.jpg) no-repeat center top;
+	  background: url(banner.jpg) no-repeat center top;
 	  background-size: cover;
 	  -webkit-background-size: cover;
 	  -moz-background-size: cover;
@@ -1180,7 +1180,7 @@ p.para {
      font-size: 2.5em;
     }
 	.banner {
-	  background: url(/assets/banner.jpg) no-repeat center top;
+	  background: url(banner.jpg) no-repeat center top;
 	  background-size: cover;
 	  -webkit-background-size: cover;
 	  -moz-background-size: cover;
@@ -1231,7 +1231,7 @@ p.para {
 	  font-size: 2.2em;
 	}
 	.banner {
-	  background: url(/assets/banner.jpg) no-repeat center top;
+	  background: url(banner.jpg) no-repeat center top;
 	  background-size: cover;
 	  -webkit-background-size: cover;
 	  -moz-background-size: cover;
@@ -1346,7 +1346,7 @@ p.para {
 	span.menu {
 	  width: 35px;
 	  height: 35px;
-	  background: url('/assets/nav.png') no-repeat;
+	  background: url('nav.png') no-repeat;
 	  display: inline-block;
 	  cursor: pointer;
 	  float: right;
@@ -1367,7 +1367,7 @@ p.para {
 	.banner {
     max-width: 100%;
   height: auto;
-	  background: url(/assets/banner.jpg) no-repeat center top;
+	  background: url(banner.jpg) no-repeat center top;
 	  background-size: cover;
 	  -webkit-background-size: cover;
 	  -moz-background-size: cover;
