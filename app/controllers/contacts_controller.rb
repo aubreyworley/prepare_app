@@ -36,7 +36,6 @@ class ContactsController < ApplicationController
     update_params = params.require(:contact).permit(:first_name, :last_name, :email, :phone_number)
     if contact.update_attributes(update_params)
       redirect_to profile_path
-      flash[:success] = "Contact successfully updated!"
     else
       redirect_to profile_path
       flash[:error] = "Oops! Try updating again!"

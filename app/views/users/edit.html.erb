@@ -1,2 +1,19 @@
-<h1>Users#create</h1>
-<p>Find me in app/views/users/create.html.erb</p>
+<div class="col-md-4"></div>
+<div class="col-md-4">
+  <h1>Edit Profile</h1>
+  <hr>
+  <%= form_for current_user, :html => { :multipart => true } do |f| %>
+    <div class="form-group">
+      <!-- Enables flash messages within the form for superior UX -->
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, class: "alert #{name == 'error' ? 'alert-danger' : 'alert-notice'}" %>
+      <% end %>
+  
+      <%= f.text_field :first_name, placeholder: "First Name", autofocus: true, class: "form-control" %><br>
+      <%= f.text_field :last_name, placeholder: "Last Name", autofocus: true, class: "form-control" %><br>
+      <%= f.email_field :email, placeholder: "Email", autofocus: true, class: "form-control" %><br>
+      <%= f.submit "Save Profile", class: "btn btn-default" %>
+    <% end %>
+  </div>
+</div>
+<div class="col-md-4"></div>

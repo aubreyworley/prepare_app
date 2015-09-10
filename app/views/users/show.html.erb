@@ -1,46 +1,94 @@
-<div class="jumbotron"></div>
 <div class="profile-page">
+  <div class="row">
+    <div class="jumbotron">
+      <div class="col-md-9 col-md-offset-1">
+        <h1>Make a plan with your people</h1>
+        <div>
+          <p>A little foresight can go a long way.</p>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="container-fluid">
     <div class="col-md-1"></div>
     <div class="col-md-3">
-      <p class="profile-img"><img src="http://babyinfoforyou.com/wp-content/uploads/2014/10/avatar-300x300.png" class= "img-responsive img-rounded profile-img"></p>
+      <p class="profile-img"><img src="https://images.unsplash.com/photo-1437915015400-137312b61975?q=80&fm=jpg&s=404211ca7568f20b30685a7413f5f30c" class= "img-responsive img-rounded profile-img"></p>
       <div class="profile-info">
-        <h2><%= current_user.first_name %><%= " " %><%= current_user.last_name %></h2>
+        <p><%= @current_user.first_name %><%= " " %><%= @current_user.last_name %></p>
         <p>Joined <%= @current_user.created_at.strftime("%b. %Y") %></p>
         <p><%= @current_user.email %></p>
+        <br>
         <p><%= @current_user.phone_number %></p>
-        <span><%= link_to "update profile", edit_user_path(current_user), class: "btn btn-dark" %></span>
+        
+        <span><%= link_to "update profile", edit_user_path(current_user), class: "btn btn-default" %></span>
       </div>
+      <br>
+      <br>
     </div>
     <div class="col-md-1"></div>
-    <div class="col-md-6">
-      <span class="profile-welcome">Welcome <%= current_user.first_name %>!
-        <h3>Your Trust Circle</h3>
-        <hr>
-        <% if current_user.contacts.any? %>
-        <% @current_user.contacts.each do |contact| %>
-        <div class="contact-section">
-          <div class="dropdown pull-right">
-            <button class="dropdown-toggle button btn btn-dark" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Edit Contact</button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-              <li><%= link_to "Update Contact", edit_contact_path(contact) %></li>
-              <li><%= link_to "Delete", contact, method: :delete %></li>
-            </ul>
-          </div>
-          <p> Name: <%= contact.first_name %> - <%= contact.last_name %></p><hr>
-          <hr>
-          <p><i class="glyphicon glyphicon-envelope"></i><%= contact.email %></p>
-          <p><i class="glyphicon glyphicon-phone"></i> <%= contact.phone_number %>
-          </div>
-          <% end %>
-          <% else %>
-            <p>Make Your Trust Circle!</p>
-            <hr>
-          <% end %>
-          <%= link_to "Add New Contact", new_contact_path, class: "btn btn-default" %>
-        </div>
-        <div class="col-md-1"></div> 
-      </div>
-    </div>
+    <div class="col-md-7">
+      <span class="profile-welcome">Welcome <%= current_user.first_name %>!</span>
+      <br>
+      <br>
+      <p>Add your closest loved ones and they will be notified of your check-in during an emergency. Make a plan now, so you know how to find and get in touch with your people when something happens.</p>
+      <br>
 
-  
+        <p>The same connections that are important in everyday life—with friends, family, neighbors, and communities—are even more crucial in a crisis.</p>
+      <br>
+      <br>
+      <hr>
+      <br>
+      <br>
+
+      <% if current_user.contacts.any? %>
+      <% @current_user.contacts.each do |contact| %>
+      <div class="contact-section">
+        <h2>Your Trust Circle</h2>  
+        <br>
+        <br>
+        <div class="table-responsive table-hover">        
+          <table class="table table-condensed">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><%= contact.first_name %><%= " " %><%= contact.last_name %></td>
+                <td><%= contact.email %></td>
+                <td><%= contact.phone_number %>
+
+                  <div class="dropdown pull-right">
+                    <button class="dropdown-toggle button btn btn-dark" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Update</button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                      <li><%= link_to "Update Contact", edit_contact_path(contact) %></li>
+                      <li><%= link_to "Delete", contact, method: :delete %></li>
+                    </ul> 
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      
+      <% end %>
+      <% else %>
+      <h2>Make Your Trust Circle!</>
+        <hr>
+        <% end %>
+        <%= link_to "Add New Contact", new_contact_path, class: "btn btn-default" %>
+      </div>
+
+  <div class="col-md-1"></div>
+</div>
+
+
+
+
+
+
