@@ -30,7 +30,6 @@
       </div>
     </div>
     <!--banner-slide-->
-    <script src="assets/responsiveslides.min.js"></script>
     <script>
         // You can also use "$(window).load(function() {"
           $(function () {
@@ -115,7 +114,7 @@
                 </div>
                 <div class="col-md-5 ab-img">
                   <div  id="top" class="callbacks_container">
-                    <a><img src="assets/home-connection-01.jpg" alt=" " title="ab"></a>
+                    <a><%= image_tag "home-connection-01.jpg", title:"ab" %></a>
                   </div>
                 </div>
                 <div class="clearfix"></div>
@@ -131,7 +130,8 @@
                     </div>
                     <div class="gallery-bottom">
                       <div class="view view-fifth">
-                        <a href="assets/home1_3.png" class="b-link-stripe b-animate-go  swipebox"  title="Image Title"><img src="assets/connect.jpeg" alt="" class="img-responsive">
+                        <a href="assets/home1_3.png" class="b-link-stripe b-animate-go  swipebox"  title="Image Title">
+                          <%= image_tag "connect.jpeg",  class:"img-responsive" %>
                           <div class="mask">
                             <h2>Get Connected</h2>
                             <p>Make the most of your existing networks of friends, family, neighbors, and colleagues—so you can get help, and help others.</p>
@@ -139,7 +139,8 @@
                         </a>
                       </div>
                       <div class="view view-fifth">
-                        <a href="assets/home1_3.png" class="b-link-stripe b-animate-go  swipebox"  title="Image Title"><img src="assets/supplies.jpeg" alt="" class="img-responsive">
+                        <a href="assets/home1_3.png" class="b-link-stripe b-animate-go  swipebox"  title="Image Title">
+                          <%= image_tag "supplies.jpeg", class:"img-responsive" %>
                           <div class="mask">
                             <h2>Gather Supplies</h2>
                             <p>Find out what’s essential, useful, and nice to have in an emergency. You probably already have many of the supplies you need.</p>
@@ -147,7 +148,8 @@
                         </a>
                       </div>
                       <div class="view view-fifth">
-                        <a href="assets/home1_3.png" class="b-link-stripe b-animate-go  swipebox"  title="Image Title"><img src="assets/plan.jpeg" alt="" class="img-responsive">
+                        <a href="assets/home1_3.png" class="b-link-stripe b-animate-go  swipebox"  title="Image Title">
+                          <%= image_tag "plan.jpeg", class:"img-responsive" %>
                           <div class="mask">
                             <h2>Make a Plan</h2>
                             <p>Make a basic plan with your loved ones—so you know what to do in an emergency.</p>
@@ -199,8 +201,6 @@
                   </div>
                   <!--footer-->
                 </div>
-                <link rel="stylesheet" href="assets/swipebox.css">
-                <script src="assets/jquery.swipebox.min.js"></script> 
                 <script type="text/javascript">
                 jQuery(function($) {
                   $(".swipebox").swipebox();
