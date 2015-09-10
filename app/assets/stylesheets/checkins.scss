@@ -1,3 +1,18 @@
-// Place all the styles related to the checkins controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#checkins {
+background-image: url(/assets/love.jpeg);
+  background-size: cover;
+  height: 500px;
+  text-align: center;
+  padding: 100px;
+  font-color: white;
+}
+
+#checkins > h1 {
+  color: white;
+  background-position: center;
+  padding: 10% 0;
+  border: 1px solid white;
+  display: inline-block;
+  padding: 0.3em 1em 0.5em 1em;
+  text-shadow: 1px 2px 4px #000000;
+}

@@ -39,7 +39,7 @@ class CheckinsController < ApplicationController
       if current_user
         flash[:notice] = "Successfully deleted checkin!"
         checkin.delete
-        redirect_to checkin_path
+        redirect_to checkins_path
       else
         flash[:error] = "You need to login in to delete post."
         redirect_to root_path
