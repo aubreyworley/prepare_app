@@ -548,6 +548,13 @@ p.para {
   font-weight: 400;
 }
 /*--teachers--*/
+
+.teachers-grids {
+  color: white;
+  margin: auto;
+  text-align: center;
+}
+
 #teach{
    padding:6em 0;
    background: #18c9d2;
@@ -723,6 +730,7 @@ p.para {
 #gallery {
    padding: 5em 0;
    background: #18c9d2;
+   font-size: 12px;
   }
   .gallery-bottom {
   margin-top: 1.5em;
@@ -1339,6 +1347,8 @@ p.para {
 	  display: none;
 	}
 	.banner {
+    max-width: 100%;
+  height: auto;
 	  background: url(assets/banner.jpg) no-repeat center top;
 	  background-size: cover;
 	  -webkit-background-size: cover;
