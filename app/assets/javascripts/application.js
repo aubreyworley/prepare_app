@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
 //= require 'jquery-1.11.1.min.js'
 //= require 'jquery.swipebox.min.js'
 //= require 'responsiveslides.min.js'
+//= require_tree .
