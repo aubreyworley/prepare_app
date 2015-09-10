@@ -194,7 +194,7 @@ nav a:focus {
     span.menu {
 	  width: 35px;
 	  height: 35px;
-	  background: url('assets/nav.png') no-repeat;
+	  background: url('/assets/nav.png') no-repeat;
 	  display: inline-block;
 	  cursor: pointer;
 	  float: right;
@@ -248,9 +248,9 @@ nav a:focus {
   padding: 0;
 }
 .banner-info h3 {
-  font-size: 2.8em;
+  font-size: 3.0em;
   font-weight: 400;
-  color:#38d9e1;
+  color: white;
   line-height: 1.4em;
 }
 .banner-info p {
@@ -612,7 +612,7 @@ p.para {
 .ch-info-wrap {
 	top: 20px;
 	left: 20px;
-	background: #f9f9f9 url(assets/banner.jpg);
+	background: #f9f9f9 url(/assets/banner.jpg);
 	box-shadow: 
 		0 0 0 20px rgba(255,255,255,0.2), 
 		inset 0 0 3px rgba(115,114, 23, 0.8);
@@ -750,7 +750,7 @@ p.para {
   position: relative;
   text-align: center;
   cursor: default;
-  background: #fff url(assets/banner.jpg) no-repeat center center;
+  background: #fff url(/assets/banner.jpg) no-repeat center center;
 }
 .view .mask,.view .content {
      width: 300px;
@@ -997,7 +997,7 @@ p.para {
 }
 @media (max-width:1280px){
 	.banner {
-	  background: url(assets/banner.jpg) no-repeat center top;
+	  background: url(/assets/banner.jpg) no-repeat center top;
 	  background-size: cover;
 	  -webkit-background-size: cover;
 	  -moz-background-size: cover;
@@ -1013,7 +1013,7 @@ p.para {
 	  text-align: center;
 	}
 	.banner {
-	  background: url(assets/banner.jpg) no-repeat center top;
+	  background: url(/assets/banner.jpg) no-repeat center top;
 	  background-size: cover;
 	  -webkit-background-size: cover;
 	  -moz-background-size: cover;
@@ -1051,7 +1051,7 @@ p.para {
 	  width: 24%;
 	}
 	.banner {
-	  background: url(assets/banner.jpg) no-repeat center top;
+	  background: url(/assets/banner.jpg) no-repeat center top;
 	  background-size: cover;
 	  -webkit-background-size: cover;
 	  -moz-background-size: cover;
@@ -1162,7 +1162,7 @@ p.para {
      font-size: 2.5em;
     }
 	.banner {
-	  background: url(assets/banner.jpg) no-repeat center top;
+	  background: url(/assets/banner.jpg) no-repeat center top;
 	  background-size: cover;
 	  -webkit-background-size: cover;
 	  -moz-background-size: cover;
@@ -1213,7 +1213,7 @@ p.para {
 	  font-size: 2.2em;
 	}
 	.banner {
-	  background: url(assets/banner.jpg) no-repeat center top;
+	  background: url(/assets/banner.jpg) no-repeat center top;
 	  background-size: cover;
 	  -webkit-background-size: cover;
 	  -moz-background-size: cover;
@@ -1328,7 +1328,7 @@ p.para {
 	span.menu {
 	  width: 35px;
 	  height: 35px;
-	  background: url('assets/nav.png') no-repeat;
+	  background: url('/assets/nav.png') no-repeat;
 	  display: inline-block;
 	  cursor: pointer;
 	  float: right;
@@ -1349,7 +1349,7 @@ p.para {
 	.banner {
     max-width: 100%;
   height: auto;
-	  background: url(assets/banner.jpg) no-repeat center top;
+	  background: url(/assets/banner.jpg) no-repeat center top;
 	  background-size: cover;
 	  -webkit-background-size: cover;
 	  -moz-background-size: cover;
