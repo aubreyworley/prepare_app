@@ -14,7 +14,6 @@ class CheckinsController < ApplicationController
   def create
     @checkin = current_user.checkins.new(checkin_params)
       if @checkin.save
-        flash[:notice] = "Successfully saved checkin."
         redirect_to checkins_path
       else
         flash[:error] = checkin.errors.full_messages.join(',')
